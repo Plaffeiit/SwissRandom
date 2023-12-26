@@ -19,7 +19,7 @@ and Liechtenstein for maps and surveying by the Swiss Federal Office of Topograp
 
 >Source: [Wikipedia DE](https://de.wikipedia.org/wiki/Geographische_Extrempunkte_der_Schweiz)
 
->Verified ~~and also converted to the outdated LV03 coordinate system~~ on https://map.geo.admin.ch/
+>Verified and also converted to the outdated LV03 coordinate system on https://map.geo.admin.ch/
 
 ## Missing features:
 
