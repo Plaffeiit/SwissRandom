@@ -3,6 +3,12 @@ from shapely.geometry import Point
 import random
 
 
+# URL to the map from Swisstopo
+MAP_URL = "https://map.geo.admin.ch/?lang=en&crosshair=marker"
+# https://map.geo.admin.ch/?lang=en&crosshair=marker&zoom=7&E=2716811.14&N=1078706.29
+map_zoom = 7
+
+
 # Generates a (random) set of coordinates within the borders of Switzerland and/or checks if they are in the country.
 class SwissRandom:
     def __init__(self, coordinate_e: float = 0, coordinate_n: float = 0):
@@ -84,13 +90,13 @@ class SwissRandom:
             self.coord_boxes[self.__coord_system]["max_n"],
         )
 
-        # Check if both coordinates are within Switzerland
+        # Check if both coordinates are within CH or FL
         if self.check_coords():
             return (self.coordinate_e, self.coordinate_n)
         else:
             self.generate_coords()
 
-    # Check if the coordinates are within Switzerland
+    # Check if the coordinates are within Switzerland (or Liechtenstein)
     def check_coords(self) -> bool:
         point = Point(float(self.coordinate_e), float(self.coordinate_n))
         # Check if the point is within the shape file
@@ -98,6 +104,9 @@ class SwissRandom:
             return True
         else:
             return False
+
+    def get_map_url(self):
+        return f"{MAP_URL}&zoom={map_zoom}&E={self.coordinate_e}&N={self.coordinate_n}"
 
 
 if __name__ == "__main__":
@@ -114,7 +123,30 @@ if __name__ == "__main__":
         coords.append(sr.get_coords())  # Get the coordinates
 
     # Print the most and least coordinates of the generated coordinates
-    print("northernmost", max(coords, key=lambda x: x[1]))
-    print("easternmost", max(coords, key=lambda x: x[0]))
-    print("southernmost", min(coords, key=lambda x: x[1]))
-    print("westernmost", min(coords, key=lambda x: x[0]))
+    northernmost = max(coords, key=lambda x: x[1])
+    print(
+        "northernmost",
+        northernmost,
+        f"{MAP_URL}&zoom={map_zoom}&E={northernmost[0]}&N={northernmost[1]}",
+    )
+
+    easternmost = max(coords, key=lambda x: x[0])
+    print(
+        "easternmost",
+        easternmost,
+        f"{MAP_URL}&zoom={map_zoom}&E={easternmost[0]}&N={easternmost[1]}",
+    )
+
+    southernmost = min(coords, key=lambda x: x[1])
+    print(
+        "southernmost",
+        southernmost,
+        f"{MAP_URL}&zoom={map_zoom}&E={southernmost[0]}&N={southernmost[1]}",
+    )
+
+    westernmost = min(coords, key=lambda x: x[0])
+    print(
+        "westernmost",
+        westernmost,
+        f"{MAP_URL}&zoom={map_zoom}&E={westernmost[0]}&N={westernmost[1]}",
+    )

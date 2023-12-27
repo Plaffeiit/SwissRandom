@@ -1,7 +1,7 @@
 #  class SwissRandom
 The class generates a (random) set of coordinates in the common Swiss LV95 system within the borders of Switzerland and Liechtenstein.
 
-~~It also supports WSG84 and the obsolete LV03 coordinate system.~~ The class can also be used to check if existing coordinates are within Switzerland.
+~~It also supports WSG84 and the obsolete LV03 coordinate system.~~ The class can also be used to check if existing coordinates are within CH or FL.
 
 ## Swiss coordinate system
 The Swiss coordinate system (or Swiss grid) is a geographic coordinate system used in Switzerland
