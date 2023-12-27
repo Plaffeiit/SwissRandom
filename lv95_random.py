@@ -106,7 +106,7 @@ class SwissRandom:
             return False
 
     def get_map_url(self):
-        return f"{MAP_URL}&zoom={map_zoom}&E={self.coordinate_e}&N={self.coordinate_n}"
+        return f"{MAP_URL}&zoom={map_zoom}&E={self.coordinate_e:.2f}&N={self.coordinate_n:.2f}"
 
 
 if __name__ == "__main__":
@@ -127,26 +127,26 @@ if __name__ == "__main__":
     print(
         "northernmost",
         northernmost,
-        f"{MAP_URL}&zoom={map_zoom}&E={northernmost[0]}&N={northernmost[1]}",
+        f"{MAP_URL}&zoom={map_zoom}&E={northernmost[0]:.2f}&N={northernmost[1]:.2f}",
     )
 
     easternmost = max(coords, key=lambda x: x[0])
     print(
         "easternmost",
         easternmost,
-        f"{MAP_URL}&zoom={map_zoom}&E={easternmost[0]}&N={easternmost[1]}",
+        f"{MAP_URL}&zoom={map_zoom}&E={easternmost[0]:.2f}&N={easternmost[1]:.2f}",
     )
 
     southernmost = min(coords, key=lambda x: x[1])
     print(
         "southernmost",
         southernmost,
-        f"{MAP_URL}&zoom={map_zoom}&E={southernmost[0]}&N={southernmost[1]}",
+        f"{MAP_URL}&zoom={map_zoom}&E={southernmost[0]:.2f}&N={southernmost[1]:.2f}",
     )
 
     westernmost = min(coords, key=lambda x: x[0])
     print(
         "westernmost",
         westernmost,
-        f"{MAP_URL}&zoom={map_zoom}&E={westernmost[0]}&N={westernmost[1]}",
+        f"{MAP_URL}&zoom={map_zoom}&E={westernmost[0]:.2f}&N={westernmost[1]:.2f}",
     )
