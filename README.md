@@ -13,7 +13,7 @@ and Liechtenstein for maps and surveying by the Swiss Federal Office of Topograp
 | Points | LV95 E | LV95 N | WGS84 Lat | WGS84 Lon |
 | --- | --- | --- | --- | --- |
 | Northernmost point in Switzerland | 2'684'602 | 1'295'934 | 47.80845 | 8.56803 |
-| Most easterly point in Switzerland | 2'833'859 | 1'166'962 | 46.61296 | 10.49219 |
+| Easternmost point in Switzerland | 2'833'859 | 1'166'962 | 46.61296 | 10.49219 |
 | Southernmost point of Switzerland | 2'722'707 | 1'075'269 | 45.81796 | 9.01734 |
 | Westernmost point of Switzerland | 2'485'410 | 1'110'070 | 46.13236 | 5.95590 |
 

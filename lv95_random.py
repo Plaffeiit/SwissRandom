@@ -9,16 +9,16 @@ class SwissRandom:
         # Bounding boxes of Switzerland (and Liechtenstein) in LV95, LV03, and WGS84
         self.coord_boxes = {
             "LV95": {
-                "min_e": 2485409,
-                "min_n": 1075268,
-                "max_e": 2833860,
-                "max_n": 1295935,
+                "min_e": 2485410,
+                "min_n": 1075269,
+                "max_e": 2833859,
+                "max_n": 1295934,
             },
             "LV03": {
-                "min_e": 485410,
-                "min_n": 75270,
+                "min_e": 485411,
+                "min_n": 75271,
                 "max_e": 833858,
-                "max_n": 295935,
+                "max_n": 295934,
             },
             "WGS84": {
                 "min_e": 5.95590,
@@ -114,7 +114,7 @@ if __name__ == "__main__":
         coords.append(sr.get_coords())  # Get the coordinates
 
     # Print the most and least coordinates of the generated coordinates
-    print("easternmost", max(coords, key=lambda x: x[0]))
-    print("westernmost", min(coords, key=lambda x: x[0]))
     print("northernmost", max(coords, key=lambda x: x[1]))
+    print("easternmost", max(coords, key=lambda x: x[0]))
     print("southernmost", min(coords, key=lambda x: x[1]))
+    print("westernmost", min(coords, key=lambda x: x[0]))
