@@ -1,5 +1,5 @@
 #  class SwissRandom
-The class generates a (random) set of coordinates in the common Swiss LV95 system within the borders of Switzerland and/or checks if they are in the country.
+The class generates a (random) set of coordinates in the common Swiss LV95 system within the borders of Switzerland and Liechtenstein.
 
 ~~It also supports WSG84 and the obsolete LV03 coordinate system.~~ The class can also be used to check if existing coordinates are within Switzerland.
 
@@ -7,7 +7,7 @@ The class generates a (random) set of coordinates in the common Swiss LV95 syste
 The Swiss coordinate system (or Swiss grid) is a geographic coordinate system used in Switzerland
 and Liechtenstein for maps and surveying by the Swiss Federal Office of Topography (Swisstopo).
 
-<Read more: https://www.swisstopo.admin.ch/en/knowledge-facts/surveying-geodesy/reference-frames/local.html
+>Read more: https://www.swisstopo.admin.ch/en/knowledge-facts/surveying-geodesy/reference-frames/local.html
 
 ## List of extreme points in Switzerland
 | Points | LV95 E | LV95 N | WGS84 Lat | WGS84 Lon |
@@ -24,6 +24,7 @@ and Liechtenstein for maps and surveying by the Swiss Federal Office of Topograp
 ## Missing features:
 
 - A set of user-defined minimum and maximum coordinates to limit the result to a specific area.
+- Shape file import to limit the result to a specific area.
 - Support for WSG84 and the old LV03 coordinate systems.
 - Conversion between the three coordinate systems.
 
